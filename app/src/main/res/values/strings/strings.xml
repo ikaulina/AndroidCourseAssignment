@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">app</string>
+
+    <string name="quantity_text" translatable="false">%d %s</string>
+    <string name="button_add">Add</string>
+    <string name="button_add_image">Image</string>
+    <string name="button_add_text">Text</string>
+    <string name="button_radio">Radio</string>
+</resources>
