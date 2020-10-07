@@ -5,7 +5,7 @@ import java.util.Random
 
 sealed class KeepItem
 
-data class KeepItemText(val title: String, val text: String) : KeepItem()
+//data class KeepItemText(val title: String, val text: String) : KeepItem()
 
 data class KeepItemImage(val uri: String) : KeepItem()
 
@@ -49,7 +49,7 @@ object RandomData {
 
     private val randomItem
         get() = when (random.nextInt(3)) {
-            0 -> textItem
+           // 0 -> textItem
             1 -> imageItem
             else -> radioItem
         }
@@ -57,12 +57,12 @@ object RandomData {
     val items
         get() = MutableList(randomSize) { randomItem }
 
-    val textItem get() = KeepItemText(randomTitle, randomLorem)
+    //val textItem get() = KeepItemText(randomTitle, randomLorem)
 
     val imageItem get() = KeepItemImage(randomUri)
 
     val radioItem get() = KeepItemRadio(randomTitle, randomTitle, randomTitle)
 
-    val setList: MutableList<KeepItemText> = mutableListOf()
+    //val setList: MutableList<KeepItemText> = mutableListOf()
 
 }

@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_shopping.view.*
-
+/*
 class ShoppingItemRecyclerAdapter(private val items: MutableList<ShoppingItem>) :
     RecyclerView.Adapter<ShoppingItemRecyclerAdapter.ShoppingViewHolder>() {
 
@@ -51,3 +51,5 @@ class ShoppingItemRecyclerAdapter(private val items: MutableList<ShoppingItem>) 
         }
     }
 }
+
+ */

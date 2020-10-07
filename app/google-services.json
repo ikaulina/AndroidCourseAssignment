@@ -8,9 +8,38 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:597022629275:android:eb74c3d10b612f5f17553e",
+        "mobilesdk_app_id": "1:597022629275:android:c4e9fdc7011bea6317553e",
         "android_client_info": {
           "package_name": "com.example.androidcourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597022629275-5b4s0qfso7f382v1kiscbd2kpg2fs0eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRdjn7xZ6shO87TPnhkvg5wR4qcrwJJKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597022629275-5b4s0qfso7f382v1kiscbd2kpg2fs0eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597022629275:android:3ab3551f44ef99fd17553e",
+        "android_client_info": {
+          "package_name": "com.example.androidcourse23"
         }
       },
       "oauth_client": [
