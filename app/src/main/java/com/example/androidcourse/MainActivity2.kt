@@ -10,35 +10,35 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity2 : AppCompatActivity() {
 
     private var database = Firebase.database.reference
-    private var let = false;
+    private var updated = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        var gg = "";
-        var hj = "";
+        var textForTitle = "";
+        var textForBody = "";
 
 
         if(intent.hasExtra("NoteTitle")){
-            gg = intent.getStringExtra("NoteTitle")
+            textForTitle = intent.getStringExtra("NoteTitle")
             textNoteHeader.setText(intent.getStringExtra("NoteTitle"))
         }
 
         if(intent.hasExtra("NoteBody")){
-            hj = intent.getStringExtra("NoteBody")
+            textForBody = intent.getStringExtra("NoteBody")
             textNoteBody.setText(intent.getStringExtra("NoteBody"))
         }
 
-        if(gg != "" || hj != ""){
-            let = true;
+        if(textForTitle != "" || textForBody != ""){
+            updated = true;
         }
     }
 
     override fun onDestroy() {
         val it = MainActivity.KeepItemText(textNoteHeader.text.toString(),textNoteBody.text.toString())
-        if(let){
+        if(updated){
             if(intent.hasExtra("NotePoz")){
                 it.uuid = intent.getStringExtra("NotePoz")
                 database.child("Notes").child(intent.getStringExtra("NotePoz")).setValue(it)
