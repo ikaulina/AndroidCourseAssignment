@@ -1,14 +1,11 @@
 package com.example.androidcourse
 
-import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.database.ktx.database
@@ -17,8 +14,6 @@ import kotlinx.android.synthetic.main.item_keep.view.*
 import kotlinx.android.synthetic.main.item_keep.view.keepClose
 import kotlinx.android.synthetic.main.item_keep_image.view.*
 import kotlinx.android.synthetic.main.item_keep_radio.view.*
-import java.util.*
-import kotlin.coroutines.CoroutineContext
 
 class KeepItemRecyclerAdapter(private val items: MutableList<MainActivity.KeepItemText>) :
     RecyclerView.Adapter<KeepItemRecyclerAdapter.KeepViewHolder>() {
@@ -87,7 +82,7 @@ override fun onBindViewHolder(holder: KeepViewHolder, position: Int) {
         val currentPosition = items.indexOf(item)
         items.removeAt(currentPosition)
         database.child("Notes").child(item.uuid).setValue(null) //Firebase delete
-        notifyItemRemoved(currentPosition)
+        Toast.makeText(context,"Deleted",Toast.LENGTH_LONG).show()
     }
     holder.itemView.setOnClickListener {
         val intent = Intent(context, MainActivity2::class.java)

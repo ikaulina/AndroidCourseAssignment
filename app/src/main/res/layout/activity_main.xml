@@ -15,36 +15,6 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <Button
-        android:id="@+id/mainButtonAddImage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_default"
-        android:text="@string/button_add_image"
-        app:layout_constraintEnd_toStartOf="@id/mainButtonAddText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/mainButtonAddText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_default"
-        android:text="@string/button_add_text"
-        app:layout_constraintEnd_toStartOf="@id/mainButtonAddRadio"
-        app:layout_constraintStart_toEndOf="@id/mainButtonAddImage"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/mainButtonAddRadio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_default"
-        android:text="@string/button_radio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/mainButtonAddText"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainItems"
         android:layout_width="0dp"
@@ -53,9 +23,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainButtonAddImage"
-        app:spanCount="2"
-        tools:listitem="@layout/item_shopping" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingAddButton"
@@ -68,12 +37,14 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="5dp"
         android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mainItems"
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.317"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:layout_constraintVertical_bias="0.371"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:useCompatPadding="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
